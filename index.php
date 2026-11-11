@@ -34,7 +34,11 @@ if(isset($_GET['cep'])) {
                 }
              }
         ?>
-    </ul>
+    </ul><form action="salvar.php" method="POST">
+        <button>salvar</button> <input type="hidden" name="cep" value="<?php echo htmlspecialchars($_GET['cep'])?>">
+    </form>
 </div>
-
+<?php elseif(isset($endereco['erro'])):?>
+    <h2>CEP encontrado</h2>
+    <p>O cep ditado pelo usuario não existe</p>
 <?php endif;?>
