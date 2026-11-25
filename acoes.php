@@ -12,7 +12,7 @@ function salvarCEP($cep,$logadouro,$bairro,$localidade,$uf,$estado,$regiao,$ddd)
 }
 function buscarTabela($tabela) {
     global $conexao;
-    $sql = "SELECT * FROM `enderecos`";
+    $sql = "SELECT * FROM $tabela";
     $resultados = $conexao->query($sql);
     return $resultados;
 }
